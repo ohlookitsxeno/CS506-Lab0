@@ -9,23 +9,24 @@ def test_dot_product():
     vector2 = np.array([4, 5, 6])
     
     result = dot_product(vector1, vector2)
-    
     assert result == 32, f"Expected 32, but got {result}"
     
 def test_cosine_similarity():
-    ### YOUR CODE HERE
+    vector1 = np.array([1, 0, 0])
+    vector2 = np.array([1, 1, 0])
     
-    result = ### YOUR CODE HERE
+    result = cosine_similarity(vector1, vector2)
     
-    expected_result = ### YOUR CODE HERE
+    expected_result = 0.7071
     
     assert np.isclose(result, expected_result), f"Expected {expected_result}, but got {result}"
 
 def test_nearest_neighbor():
-    ### YOUR CODE HERE
+    target = np.array([1,0,0])
+    vectors = np.array([[0,5,0],[12,4,0],[9,0,0]])
     
-    result = ### YOUR CODE HERE
+    result = nearest_neighbor(target, vectors)
     
-    expected_index = ### YOUR CODE HERE
+    expected_index = 2
     
     assert result == expected_index, f"Expected index {expected_index}, but got {result}"
